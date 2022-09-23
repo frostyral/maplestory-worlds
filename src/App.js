@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Body from './components/Body';
+import Main from './components/Main';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <head></head>
       <div class="content">
         <NavBar />
-        <Body />
+        <Main />
       </div>
     </div>
   );

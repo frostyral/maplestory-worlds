@@ -1,28 +1,26 @@
 import '../styles/home.sass';
-import elnath from '../media/elnath.png';
 
-function Body() {
+export default function Cards(props) {
   return (
-    <div class="Body">
-      <div class="card-section">
-        <div class="card-content">
-          <img class="card-image" src={elnath}></img>
-          <div class="card-info">
-            <h2 class="card-title">
-              <div class="card-continent">MAPLE WORLD</div>El Nath
+    <div className="Body">
+      <div className="card-section">
+        <div className="card-content">
+          <img
+            class="card-image"
+            src={props.imageUrl}
+            alt={props.title}
+          />
+          <div className="card-info">
+            <h2 className="card-title">
+              <div className="card-continent">{props.continent}</div>
+              {props.title}
             </h2>
-            <p class="card-level">Level 50 - 70</p>
-            <p class="card-text">
-              El Nath is a snowy town that can be accessed via the
-              first floor of Orbis Tower. Past El Nath is the
-              volcano-like Dungeon area, which can only be accessed if
-              one is level 50 or above.
-            </p>
+            <h2 className="card-title"></h2>
+            <p class="card-level">{props.level}</p>
+            <p class="card-text">{props.description}</p>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-export default Body;
